@@ -13,7 +13,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-
+        $rsetKategori = Kategori::all();
+        return response()->json($rsetKategori);
     }
 
     /**
