@@ -13,8 +13,10 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $rsetKategori = Kategori::all();
-        return response()->json($rsetKategori);
+        $kategori = Kategori::all();
+        $data = array("data"=>$kategori);
+
+        return response()->json($data);
     }
 
     /**
@@ -22,7 +24,7 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-       
+
     }
 
     /**
